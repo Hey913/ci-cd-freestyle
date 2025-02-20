@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(MyProject, VERSION 1.0)
+project(MyProjectTests VERSION 1.0)
 
-set(CMAKE_CXX_STANDART 11)
+set(CMAKE_CXX_STANDARD 11)
 
-add_executable(MyExecutable test_utils.cpp)
+add_executable(TestExecutable test_utils.cpp)
+target_link_libraries(TestExecutable PRIVATE UtilsLib)
+
